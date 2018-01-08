@@ -1,0 +1,39 @@
+<script type='text/javascript'>
+  $(function() {
+    Dashing.widget_base_dimensions = [280, 280]
+    Dashing.numColumns = 5
+  });
+function openUrl(uri){
+    window.open(uri, '_blank');
+}
+</script>
+
+<% content_for :title do %>Sensu Status - 1080p<% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="sensu-status-jenkins" data-view="Sensu" data-unordered="true" data-title="Jenkins" data-moreinfo="Unacknowledged events"></div>
+    </li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="sensu-status-logstash-test" data-view="Sensu" data-unordered="true" data-title="ELK-Test" data-moreinfo="Unacknowledged events"></div>
+    </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="sensu-status-logstash-prod" data-view="Sensu" data-unordered="true" data-title="ELK-Prod" data-moreinfo="Unacknowledged events"></div>
+    </li>
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="sensu-status-git" data-view="Sensu" data-unordered="true" data-title="Git" data-moreinfo="Unacknowledged events"></div>
+    </li>
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"> </div>
+    </li>
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="sensu-crit-list-new" data-view="List" data-title="Critical New"></div/>
+    </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="2">
+      <div data-id="sensu-warn-list-new" data-view="List" data-title="Warning New"></div/>
+    </li>
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="2">
+      <div data-id="supportlist" data-view="Text" data-title="Support Name:"></div/>
+    </li>
+  </ul>
+</div>
